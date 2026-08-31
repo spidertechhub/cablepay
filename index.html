@@ -15,26 +15,26 @@
 <body class="bg-[#FBFBFE] text-slate-900 font-sans antialiased selection:bg-purple-100 selection:text-theme page-fade">
 
   <!-- ================= UNIFIED FIXED HEADER (LIVE BAR + NAVBAR) ================= -->
-  <header class="fixed top-0 left-0 right-0 z-50">
+  <header class="fixed top-0 left-0 w-full z-[100] flex flex-col">
     <!-- Fixed Top Live Announcement Bar -->
-    <div class="bg-black text-white text-xs sm:text-sm py-2 px-3 sm:px-6 shadow-md border-b border-white/10">
+    <div class="bg-black text-white text-xs sm:text-sm py-2 px-3 sm:px-6 shadow-md border-b border-white/10 w-full">
       <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
         <div class="flex items-center space-x-2 flex-shrink-0">
           <span class="relative flex h-2.5 w-2.5">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
           </span>
-          <span class="font-bold text-[11px] sm:text-xs text-slate-200 no-wrap-text">Live Representatives Available 24/7</span>
+          <span class="font-bold text-[11px] sm:text-xs text-slate-200 whitespace-nowrap">Live Representatives Available 24/7</span>
         </div>
         <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 bg-white text-black hover:bg-slate-100 px-3 sm:px-4 py-1 rounded-full font-bold text-[11px] sm:text-xs transition-transform active:scale-95 flex-shrink-0">
           <i data-lucide="phone-call" class="w-3.5 h-3.5 theme-text"></i>
-          <span class="no-wrap-text">Call: <strong class="theme-text">(607) 475-9253</strong></span>
+          <span class="whitespace-nowrap">Call: <strong class="theme-text">(607) 475-9253</strong></span>
         </a>
       </div>
     </div>
 
     <!-- Fixed Main Navbar -->
-    <div class="bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm">
+    <div class="bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm w-full">
       <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
         <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
           <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl theme-bg flex items-center justify-center text-white shadow-md">
@@ -42,7 +42,7 @@
           </div>
           <div class="flex flex-col">
             <span class="text-xl sm:text-2xl font-black tracking-tight text-black leading-none">Cable<span class="theme-text">Pay</span></span>
-            <span class="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-slate-500 mt-0.5 hidden xs:block">Telephone Concierge</span>
+            <span class="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-slate-500 mt-0.5 hidden sm:block">Telephone Concierge</span>
           </div>
         </a>
 
@@ -57,17 +57,17 @@
         <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
           <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 theme-bg hover:bg-theme-dark text-white font-black text-xs sm:text-sm md:text-base px-3 sm:px-5 py-2 sm:py-3 rounded-full apple-shadow transition-all duration-200 active:scale-95">
             <i data-lucide="phone" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white"></i>
-            <span class="no-wrap-text">(607) 475-9253</span>
+            <span class="whitespace-nowrap">(607) 475-9253</span>
           </a>
-          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors" aria-label="Toggle Menu">
-            <i data-lucide="menu" id="menuIconOpen" class="w-6 h-6"></i>
+          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors focus:outline-none focus:ring-2 focus:ring-theme/50" aria-label="Toggle Menu">
+            <i data-lucide="menu" id="menuIconOpen" class="w-6 h-6 block"></i>
             <i data-lucide="x" id="menuIconClose" class="w-6 h-6 hidden"></i>
           </button>
         </div>
       </div>
 
       <!-- Mobile Drawer Menu -->
-      <div id="mobileMenu" class="lg:hidden bg-white border-b border-slate-200 px-4 space-y-2 shadow-xl">
+      <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 space-y-2 shadow-xl w-full max-h-[75vh] overflow-y-auto">
         <div class="flex flex-col space-y-1 font-bold text-slate-800 text-sm pt-2">
           <a href="index.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
             <span>Home</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
@@ -345,7 +345,7 @@
           </div>
           <div class="text-left">
             <p class="text-[9px] sm:text-[10px] uppercase font-bold text-slate-400">Tap to Call Live Agent</p>
-            <p class="text-xs sm:text-base font-extrabold text-white no-wrap-text">(607) 475-9253</p>
+            <p class="text-xs sm:text-base font-extrabold text-white whitespace-nowrap">(607) 475-9253</p>
           </div>
         </div>
         <span class="theme-bg text-white font-bold text-[11px] sm:text-xs px-3 sm:px-4 py-1.5 rounded-full flex-shrink-0">
