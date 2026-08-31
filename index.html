@@ -15,85 +15,106 @@
 <body class="bg-[#FBFBFE] text-slate-900 font-sans antialiased selection:bg-purple-100 selection:text-theme page-fade">
 
   <!-- ================= UNIFIED FIXED HEADER (LIVE BAR + NAVBAR) ================= -->
-<header class="fixed inset-x-0 top-0 z-50">
-    <!-- Fixed Top Live Announcement Bar -->
-    <div class="bg-black text-white text-xs sm:text-sm py-2 px-3 sm:px-6 shadow-md border-b border-white/10">
-      <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
-        <div class="flex items-center space-x-2 flex-shrink-0">
-          <span class="relative flex h-2.5 w-2.5">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-          </span>
-          <span class="font-bold text-[11px] sm:text-xs text-slate-200 no-wrap-text">Live Representatives Available 24/7</span>
+<!-- Fixed Header: Locked to top under all layout conditions -->
+<header class="fixed top-0 left-0 right-0 z-50">
+  <!-- Top Live Announcement Bar -->
+  <div class="bg-black text-white text-xs sm:text-sm py-2 px-3 sm:px-6 shadow-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      <div class="flex items-center space-x-2 flex-shrink-0">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        </span>
+        <span class="font-bold text-[11px] sm:text-xs text-slate-200 no-wrap-text">Live Representatives Available 24/7</span>
+      </div>
+      <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 bg-white text-black hover:bg-slate-100 px-3 sm:px-4 py-1 rounded-full font-bold text-[11px] sm:text-xs transition-transform active:scale-95 flex-shrink-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-call w-3.5 h-3.5 theme-text"><path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+        <span class="no-wrap-text">Call: <strong class="theme-text">(607) 475-9253</strong></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <div class="bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+      <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl theme-bg flex items-center justify-center text-white shadow-md">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tv w-5 h-5 sm:w-6 sm:h-6"><path d="m17 2-5 5-5-5"></path><rect width="20" height="15" x="2" y="7" rx="2"></rect></svg>
         </div>
-        <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 bg-white text-black hover:bg-slate-100 px-3 sm:px-4 py-1 rounded-full font-bold text-[11px] sm:text-xs transition-transform active:scale-95 flex-shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone-call" aria-hidden="true" class="lucide lucide-phone-call w-3.5 h-3.5 theme-text"><path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
-          <span class="no-wrap-text">Call: <strong class="theme-text">(607) 475-9253</strong></span>
+        <div class="flex flex-col">
+          <span class="text-xl sm:text-2xl font-black tracking-tight text-black leading-none">Cable<span class="theme-text">Pay</span></span>
+          <span class="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-slate-500 mt-0.5 hidden xs:block">Telephone Concierge</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center space-x-6 text-sm font-bold text-slate-700">
+        <a href="index.html" class="hover:text-theme transition-colors nav-link theme-text">Home</a>
+        <a href="providers.html" class="hover:text-theme transition-colors nav-link">Major Providers</a>
+        <a href="about.html" class="hover:text-theme transition-colors nav-link">About Us</a>
+        <a href="contact.html" class="hover:text-theme transition-colors nav-link">Contact Us</a>
+        <a href="refund-policy.html" class="hover:text-theme transition-colors nav-link text-rose-600">No Refunds Policy</a>
+      </nav>
+
+      <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+        <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 theme-bg hover:bg-theme-dark text-white font-black text-xs sm:text-sm md:text-base px-3 sm:px-5 py-2 sm:py-3 rounded-full apple-shadow transition-all duration-200 active:scale-95">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-3.5 h-3.5 sm:w-4 sm:h-4 text-white"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+          <span class="no-wrap-text">(607) 475-9253</span>
         </a>
+        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors" aria-label="Toggle Menu">
+          <!-- Hamburger Icon (Visible by default) -->
+          <svg id="menuIconOpen" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-6 h-6"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+          <!-- Close Icon (Hidden by default) -->
+          <svg id="menuIconClose" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x w-6 h-6 hidden"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+        </button>
       </div>
     </div>
 
-    <!-- Fixed Main Navbar -->
-    <div class="bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm">
-      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
-        <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
-          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl theme-bg flex items-center justify-center text-white shadow-md">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="tv" aria-hidden="true" class="lucide lucide-tv w-5 h-5 sm:w-6 sm:h-6"><path d="m17 2-5 5-5-5"></path><rect width="20" height="15" x="2" y="7" rx="2"></rect></svg>
-          </div>
-          <div class="flex flex-col">
-            <span class="text-xl sm:text-2xl font-black tracking-tight text-black leading-none">Cable<span class="theme-text">Pay</span></span>
-            <span class="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-slate-500 mt-0.5 hidden xs:block">Telephone Concierge</span>
-          </div>
+    <!-- Mobile Drawer Menu (Hidden by default) -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 space-y-2 shadow-xl">
+      <div class="flex flex-col space-y-1 font-bold text-slate-800 text-sm pt-2">
+        <a href="index.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+          <span>Home</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-4 h-4 text-slate-400"><path d="m9 18 6-6-6-6"></path></svg>
         </a>
-
-        <nav class="hidden lg:flex items-center space-x-6 text-sm font-bold text-slate-700">
-          <a href="index.html" class="hover:text-theme transition-colors nav-link theme-text">Home</a>
-          <a href="providers.html" class="hover:text-theme transition-colors nav-link">Major Providers</a>
-          <a href="about.html" class="hover:text-theme transition-colors nav-link">About Us</a>
-          <a href="contact.html" class="hover:text-theme transition-colors nav-link">Contact Us</a>
-          <a href="refund-policy.html" class="hover:text-theme transition-colors nav-link text-rose-600">No Refunds Policy</a>
-        </nav>
-
-        <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
-          <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 theme-bg hover:bg-theme-dark text-white font-black text-xs sm:text-sm md:text-base px-3 sm:px-5 py-2 sm:py-3 rounded-full apple-shadow transition-all duration-200 active:scale-95">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-3.5 h-3.5 sm:w-4 sm:h-4 text-white"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
-            <span class="no-wrap-text">(607) 475-9253</span>
-          </a>
-          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors" aria-label="Toggle Menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" id="menuIconOpen" class="lucide lucide-menu w-6 h-6"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true" id="menuIconClose" class="lucide lucide-x w-6 h-6 hidden"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
-          </button>
-        </div>
+        <a href="providers.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+          <span>Major Providers</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-4 h-4 text-slate-400"><path d="m9 18 6-6-6-6"></path></svg>
+        </a>
+        <a href="about.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+          <span>About Us</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-4 h-4 text-slate-400"><path d="m9 18 6-6-6-6"></path></svg>
+        </a>
+        <a href="contact.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+          <span>Contact Us</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-4 h-4 text-slate-400"><path d="m9 18 6-6-6-6"></path></svg>
+        </a>
+        <a href="refund-policy.html" class="px-3 py-2 rounded-xl hover:bg-rose-50 text-rose-600 flex items-center justify-between">
+          <span>No Refunds Policy</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-4 h-4 text-rose-400"><path d="m9 18 6-6-6-6"></path></svg>
+        </a>
       </div>
-
-      <!-- Mobile Drawer Menu (Hidden by default) -->
-      <div id="mobileMenu" class="lg:hidden hidden bg-white border-b border-slate-200 px-4 space-y-2 shadow-xl">
-        <div class="flex flex-col space-y-1 font-bold text-slate-800 text-sm pt-2">
-          <a href="index.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
-            <span>Home</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-slate-400"><path d="m9 18 6-6-6-6"></path></svg>
-          </a>
-          <a href="providers.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
-            <span>Major Providers</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-slate-400"><path d="m9 18 6-6-6-6"></path></svg>
-          </a>
-          <a href="about.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
-            <span>About Us</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-slate-400"><path d="m9 18 6-6-6-6"></path></svg>
-          </a>
-          <a href="contact.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
-            <span>Contact Us</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-slate-400"><path d="m9 18 6-6-6-6"></path></svg>
-          </a>
-          <a href="refund-policy.html" class="px-3 py-2 rounded-xl hover:bg-rose-50 text-rose-600 flex items-center justify-between">
-            <span>No Refunds Policy</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-rose-400"><path d="m9 18 6-6-6-6"></path></svg>
-          </a>
-        </div>
-        <div class="pt-2 pb-4">
-          <a href="tel:16074759253" class="w-full inline-flex items-center justify-center space-x-2 theme-bg text-white font-extrabold text-sm py-3 rounded-full shadow-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone-call" aria-hidden="true" class="lucide lucide-phone-call w-4 h-4"><path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
-            <span>Call: (607) 475-9253</span>
-          </a>
-        </div>
+      <div class="pt-2 pb-4">
+        <a href="tel:16074759253" class="w-full inline-flex items-center justify-center space-x-2 theme-bg text-white font-extrabold text-sm py-3 rounded-full shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-call w-4 h-4"><path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+          <span>Call: (607) 475-9253</span>
+        </a>
       </div>
     </div>
+  </div>
 </header>
+
+<!-- JavaScript to handle button clicks and toggling -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+    const iconOpen = document.getElementById('menuIconOpen');
+    const iconClose = document.getElementById('menuIconClose');
+
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        iconOpen.classList.toggle('hidden');
+        iconClose.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
   <!-- Hero Section -->
   <section class="relative pt-36 pb-20 md:pt-48 md:pb-28 overflow-hidden border-b border-slate-200">
     <div class="absolute inset-0 -z-10 bg-slate-950">
