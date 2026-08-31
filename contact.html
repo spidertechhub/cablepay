@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | CablePay</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%235A23B9'/><path d='M30 52 L42 64 L70 36' stroke='white' stroke-width='10' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='50' cy='50' r='38' stroke='white' stroke-width='4' fill='none' opacity='0.3'/></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { theme: { DEFAULT: 'rgb(90, 35, 185)', dark: '#43198a', light: '#f4efff', surface: '#faf7ff' } },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#FBFBFE] text-slate-900 font-sans antialiased page-fade">
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 h-20 flex items-center px-4 sm:px-8 justify-between">
+    <a href="index.html" class="flex items-center space-x-2">
+      <div class="w-10 h-10 rounded-xl theme-bg flex items-center justify-center text-white"><i data-lucide="tv" class="w-5 h-5"></i></div>
+      <span class="text-2xl font-black text-black">Cable<span class="theme-text">Pay</span></span>
+    </a>
+    <a href="tel:16074759253" class="theme-bg text-white font-bold px-5 py-2.5 rounded-full text-sm">Call (607) 475-9253</a>
+  </header>
+
+  <main class="pt-32 pb-20 max-w-4xl mx-auto px-4">
+    <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm space-y-6">
+      <span class="bg-theme-light theme-text px-3 py-1 rounded-full text-xs font-bold">Contact & Support</span>
+      <h1 class="text-3xl sm:text-4xl font-black text-black">Get in Touch With Our Telephone Concierge</h1>
+      <p class="text-slate-700">For fastest service, please call our 24/7 direct telephone line. Our representatives are standing by to assist with any provider payment or account inquiry.</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+        <div class="p-6 bg-purple-50/60 border border-purple-200 rounded-2xl">
+          <i data-lucide="phone-call" class="w-8 h-8 theme-text mb-3"></i>
+          <h3 class="font-black text-black text-lg">Telephone Helpline</h3>
+          <p class="text-xs text-slate-600 mt-1 mb-4">Available 24 hours a day, 7 days a week.</p>
+          <a href="tel:16074759253" class="font-black text-lg sm:text-xl theme-text hover:underline block">(607) 475-9253</a>
+        </div>
+        <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+          <i data-lucide="clock" class="w-8 h-8 text-slate-700 mb-3"></i>
+          <h3 class="font-black text-black text-lg">Hours of Operation</h3>
+          <p class="text-xs text-slate-600 mt-1">Monday – Sunday: Open 24 Hours</p>
+          <p class="text-xs text-emerald-600 font-bold mt-2">Zero Automated Hold Trees</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>

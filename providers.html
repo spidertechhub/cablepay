@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supported Providers | CablePay</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%235A23B9'/><path d='M30 52 L42 64 L70 36' stroke='white' stroke-width='10' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='50' cy='50' r='38' stroke='white' stroke-width='4' fill='none' opacity='0.3'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { theme: { DEFAULT: 'rgb(90, 35, 185)', dark: '#43198a', light: '#f4efff', surface: '#faf7ff' } },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#FBFBFE] text-slate-900 font-sans antialiased page-fade">
+
+  <!-- Top Bar -->
+  <div class="fixed top-0 left-0 right-0 z-50 bg-black text-white text-xs sm:text-sm py-2 px-3 sm:px-6 shadow-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+      <div class="flex items-center space-x-2 flex-shrink-0">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        </span>
+        <span class="font-bold text-[11px] sm:text-xs text-slate-200">Live Representatives Available</span>
+      </div>
+      <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 bg-white text-black hover:bg-slate-100 px-3 sm:px-4 py-1 rounded-full font-bold text-[11px] sm:text-xs">
+        <i data-lucide="phone-call" class="w-3.5 h-3.5 theme-text"></i>
+        <span>Call: <strong class="theme-text">(607) 475-9253</strong></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="fixed top-9 sm:top-10 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-2">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl theme-bg flex items-center justify-center text-white shadow-md">
+          <i data-lucide="tv" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+        </div>
+        <span class="text-xl sm:text-2xl font-black tracking-tight text-black">Cable<span class="theme-text">Pay</span></span>
+      </a>
+
+      <nav class="hidden lg:flex items-center space-x-6 text-sm font-bold text-slate-700">
+        <a href="index.html" class="hover:text-theme nav-link">Home</a>
+        <a href="providers.html" class="hover:text-theme nav-link">Major Providers</a>
+        <a href="about.html" class="hover:text-theme nav-link">About Us</a>
+        <a href="contact.html" class="hover:text-theme nav-link">Contact Us</a>
+        <a href="refund-policy.html" class="hover:text-theme nav-link text-rose-600">No Refunds Policy</a>
+      </nav>
+
+      <div class="flex items-center space-x-2">
+        <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 theme-bg hover:bg-theme-dark text-white font-black text-xs sm:text-sm px-4 py-2.5 rounded-full apple-shadow">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          <span>(607) 475-9253</span>
+        </a>
+        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100"><i data-lucide="menu" id="menuIconOpen" class="w-6 h-6"></i><i data-lucide="x" id="menuIconClose" class="w-6 h-6 hidden"></i></button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="lg:hidden bg-white border-b border-slate-200 px-4 space-y-2 shadow-xl">
+      <div class="flex flex-col space-y-1 font-bold text-slate-800 text-sm pt-2">
+        <a href="index.html" class="px-3 py-2 rounded-xl hover:bg-theme-light">Home</a>
+        <a href="providers.html" class="px-3 py-2 rounded-xl hover:bg-theme-light theme-text">Major Providers</a>
+        <a href="about.html" class="px-3 py-2 rounded-xl hover:bg-theme-light">About Us</a>
+        <a href="contact.html" class="px-3 py-2 rounded-xl hover:bg-theme-light">Contact Us</a>
+        <a href="refund-policy.html" class="px-3 py-2 rounded-xl text-rose-600">No Refunds Policy</a>
+      </div>
+      <div class="pt-2 pb-4">
+        <a href="tel:16074759253" class="w-full inline-flex items-center justify-center space-x-2 theme-bg text-white font-extrabold text-sm py-3 rounded-full">
+          <i data-lucide="phone" class="w-4 h-4"></i><span>Call (607) 475-9253</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <main class="pt-36 pb-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="inline-block px-3 py-1 rounded-full text-xs font-black uppercase bg-theme-light theme-text border border-purple-200 mb-2">Carrier Directory</span>
+      <h1 class="text-3xl sm:text-5xl font-black text-black mb-4">Supported Cable & Satellite Networks</h1>
+      <p class="text-slate-600 text-base">Have your statement ready and call our hotline <strong class="text-black font-extrabold">(607) 475-9253</strong> for immediate live agent help.</p>
+    </div>
+
+    <div class="space-y-6">
+      <!-- SiriusXM -->
+      <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center space-x-5">
+          <div class="w-24 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2 flex items-center justify-center flex-shrink-0">
+            <img src="https://brandslogos.com/wp-content/uploads/images/large/siriusxm-logo-vector.svg" alt="SiriusXM" class="max-h-10 max-w-full">
+          </div>
+          <div>
+            <h3 class="text-xl font-black text-black">SiriusXM Satellite Radio</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Car radio renewals, activation signal re-sending, monthly billing, and subscription plans.</p>
+          </div>
+        </div>
+        <a href="tel:16074759253" class="w-full md:w-auto inline-flex items-center justify-center space-x-2 theme-bg text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full hover:bg-theme-dark flex-shrink-0">
+          <i data-lucide="phone" class="w-4 h-4"></i><span>Call (607) 475-9253</span>
+        </a>
+      </div>
+
+      <!-- Spectrum -->
+      <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center space-x-5">
+          <div class="w-24 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2 flex items-center justify-center flex-shrink-0">
+            <img src="https://corporate.charter.com/static/da94033386d1044b44e59b86c4c51781/ca5d3/Spectrum_Logo_Preview.webp" alt="Spectrum" class="max-h-8 max-w-full">
+          </div>
+          <div>
+            <h3 class="text-xl font-black text-black">Charter Spectrum TV & Internet</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Direct telephone bill payments, channel tier upgrades, and late balance clearing.</p>
+          </div>
+        </div>
+        <a href="tel:16074759253" class="w-full md:w-auto inline-flex items-center justify-center space-x-2 theme-bg text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full hover:bg-theme-dark flex-shrink-0">
+          <i data-lucide="phone" class="w-4 h-4"></i><span>Call (607) 475-9253</span>
+        </a>
+      </div>
+
+      <!-- DirecTV -->
+      <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center space-x-5">
+          <div class="w-24 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2 flex items-center justify-center flex-shrink-0">
+            <img src="https://s10019.cdn.ncms.io/wp-content/themes/directv-v5/assets/images/dtv-logo-cd6841a51c0fe602e4da.svg" alt="DirecTV" class="max-h-7 max-w-full">
+          </div>
+          <div>
+            <h3 class="text-xl font-black text-black">DirecTV Satellite & Stream</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Satellite bill pay, receiver upgrades, and Sunday ticket/sports tier assistance.</p>
+          </div>
+        </div>
+        <a href="tel:16074759253" class="w-full md:w-auto inline-flex items-center justify-center space-x-2 theme-bg text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full hover:bg-theme-dark flex-shrink-0">
+          <i data-lucide="phone" class="w-4 h-4"></i><span>Call (607) 475-9253</span>
+        </a>
+      </div>
+
+      <!-- Comcast Xfinity -->
+      <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center space-x-5">
+          <div class="w-24 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2 flex items-center justify-center flex-shrink-0">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkMUAnqkHZfz2IkFxSCNHSkFFqyeYaeg4C1fBj1Ocmd04Cyc4cLaaZwBR3&s=10" alt="Xfinity" class="max-h-8 max-w-full">
+          </div>
+          <div>
+            <h3 class="text-xl font-black text-black">Comcast Xfinity Broadband & TV</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">High-speed modem bills, bundled plan discounts, and statement verification.</p>
+          </div>
+        </div>
+        <a href="tel:16074759253" class="w-full md:w-auto inline-flex items-center justify-center space-x-2 theme-bg text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full hover:bg-theme-dark flex-shrink-0">
+          <i data-lucide="phone" class="w-4 h-4"></i><span>Call (607) 475-9253</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-950 text-slate-400 text-xs py-8 text-center border-t border-slate-800">
+    <p>&copy; 2026 CablePay. For assistance call <a href="tel:16074759253" class="text-white font-bold underline">(607) 475-9253</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
