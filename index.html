@@ -8,107 +8,97 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            theme: { DEFAULT: 'rgb(90, 35, 185)', dark: '#43198a', light: '#f4efff', surface: '#faf7ff' }
-          },
-          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="css/output.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="bg-[#FBFBFE] text-slate-900 font-sans antialiased selection:bg-purple-100 selection:text-theme page-fade">
 
-  <!-- Fixed Top Live Bar -->
-  <div class="fixed top-0 left-0 right-0 z-50 bg-black text-white text-xs sm:text-sm py-2 px-3 sm:px-6 shadow-md border-b border-white/10">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
-      <div class="flex items-center space-x-2 flex-shrink-0">
-        <span class="relative flex h-2.5 w-2.5">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-        </span>
-        <span class="font-bold text-[11px] sm:text-xs text-slate-200 no-wrap-text">Live Agents Online 24/7</span>
-      </div>
-      <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 bg-white text-black hover:bg-slate-100 px-3 sm:px-4 py-1 rounded-full font-bold text-[11px] sm:text-xs transition-transform active:scale-95 flex-shrink-0">
-        <i data-lucide="phone-call" class="w-3.5 h-3.5 theme-text"></i>
-        <span class="no-wrap-text">Call: <strong class="theme-text">(607) 475-9253</strong></span>
-      </a>
-    </div>
-  </div>
-
-  <!-- Header & Navigation -->
-  <header class="fixed top-9 sm:top-10 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
-      <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
-        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl theme-bg flex items-center justify-center text-white shadow-md">
-          <i data-lucide="tv" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+  <!-- ================= UNIFIED FIXED HEADER (LIVE BAR + NAVBAR) ================= -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <!-- Fixed Top Live Announcement Bar -->
+    <div class="bg-black text-white text-xs sm:text-sm py-2 px-3 sm:px-6 shadow-md border-b border-white/10">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+        <div class="flex items-center space-x-2 flex-shrink-0">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+          </span>
+          <span class="font-bold text-[11px] sm:text-xs text-slate-200 no-wrap-text">Live Representatives Available 24/7</span>
         </div>
-        <div class="flex flex-col">
-          <span class="text-xl sm:text-2xl font-black tracking-tight text-black leading-none">Cable<span class="theme-text">Pay</span></span>
-          <span class="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-slate-500 mt-0.5 hidden xs:block">Telephone Concierge</span>
-        </div>
-      </a>
-
-      <nav class="hidden lg:flex items-center space-x-6 text-sm font-bold text-slate-700">
-        <a href="index.html" class="hover:text-theme transition-colors nav-link">Home</a>
-        <a href="providers.html" class="hover:text-theme transition-colors nav-link">Major Providers</a>
-        <a href="about.html" class="hover:text-theme transition-colors nav-link">About Us</a>
-        <a href="contact.html" class="hover:text-theme transition-colors nav-link">Contact Us</a>
-        <a href="refund-policy.html" class="hover:text-theme transition-colors nav-link text-rose-600">No Refunds Policy</a>
-      </nav>
-
-      <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
-        <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 theme-bg hover:bg-theme-dark text-white font-black text-xs sm:text-sm md:text-base px-3 sm:px-5 py-2 sm:py-3 rounded-full apple-shadow transition-all duration-200 active:scale-95">
-          <i data-lucide="phone" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white"></i>
-          <span class="no-wrap-text">(607) 475-9253</span>
+        <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 bg-white text-black hover:bg-slate-100 px-3 sm:px-4 py-1 rounded-full font-bold text-[11px] sm:text-xs transition-transform active:scale-95 flex-shrink-0">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 theme-text"></i>
+          <span class="no-wrap-text">Call: <strong class="theme-text">(607) 475-9253</strong></span>
         </a>
-        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors" aria-label="Toggle Menu">
-          <i data-lucide="menu" id="menuIconOpen" class="w-6 h-6"></i>
-          <i data-lucide="x" id="menuIconClose" class="w-6 h-6 hidden"></i>
-        </button>
       </div>
     </div>
 
-    <!-- Mobile Drawer Menu -->
-    <div id="mobileMenu" class="lg:hidden bg-white border-b border-slate-200 px-4 space-y-2 shadow-xl">
-      <div class="flex flex-col space-y-1 font-bold text-slate-800 text-sm pt-2">
-        <a href="index.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
-          <span>Home</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+    <!-- Fixed Main Navbar -->
+    <div class="bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+        <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl theme-bg flex items-center justify-center text-white shadow-md">
+            <i data-lucide="tv" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl sm:text-2xl font-black tracking-tight text-black leading-none">Cable<span class="theme-text">Pay</span></span>
+            <span class="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-slate-500 mt-0.5 hidden xs:block">Telephone Concierge</span>
+          </div>
         </a>
-        <a href="providers.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
-          <span>Major Providers</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-        </a>
-        <a href="about.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
-          <span>About Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-        </a>
-        <a href="contact.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
-          <span>Contact Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-        </a>
-        <a href="refund-policy.html" class="px-3 py-2 rounded-xl hover:bg-rose-50 text-rose-600 flex items-center justify-between">
-          <span>No Refunds Policy</span><i data-lucide="chevron-right" class="w-4 h-4 text-rose-400"></i>
-        </a>
+
+        <nav class="hidden lg:flex items-center space-x-6 text-sm font-bold text-slate-700">
+          <a href="index.html" class="hover:text-theme transition-colors nav-link">Home</a>
+          <a href="providers.html" class="hover:text-theme transition-colors nav-link">Major Providers</a>
+          <a href="about.html" class="hover:text-theme transition-colors nav-link">About Us</a>
+          <a href="contact.html" class="hover:text-theme transition-colors nav-link">Contact Us</a>
+          <a href="refund-policy.html" class="hover:text-theme transition-colors nav-link text-rose-600">No Refunds Policy</a>
+        </nav>
+
+        <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+          <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 theme-bg hover:bg-theme-dark text-white font-black text-xs sm:text-sm md:text-base px-3 sm:px-5 py-2 sm:py-3 rounded-full apple-shadow transition-all duration-200 active:scale-95">
+            <i data-lucide="phone" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white"></i>
+            <span class="no-wrap-text">(607) 475-9253</span>
+          </a>
+          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors" aria-label="Toggle Menu">
+            <i data-lucide="menu" id="menuIconOpen" class="w-6 h-6"></i>
+            <i data-lucide="x" id="menuIconClose" class="w-6 h-6 hidden"></i>
+          </button>
+        </div>
       </div>
-      <div class="pt-2 pb-4">
-        <a href="tel:16074759253" class="w-full inline-flex items-center justify-center space-x-2 theme-bg text-white font-extrabold text-sm py-3 rounded-full shadow-lg">
-          <i data-lucide="phone-call" class="w-4 h-4"></i>
-          <span>Call: (607) 475-9253</span>
-        </a>
+
+      <!-- Mobile Drawer Menu -->
+      <div id="mobileMenu" class="lg:hidden bg-white border-b border-slate-200 px-4 space-y-2 shadow-xl">
+        <div class="flex flex-col space-y-1 font-bold text-slate-800 text-sm pt-2">
+          <a href="index.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+            <span>Home</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="providers.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+            <span>Major Providers</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="about.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+            <span>About Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="contact.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+            <span>Contact Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="refund-policy.html" class="px-3 py-2 rounded-xl hover:bg-rose-50 text-rose-600 flex items-center justify-between">
+            <span>No Refunds Policy</span><i data-lucide="chevron-right" class="w-4 h-4 text-rose-400"></i>
+          </a>
+        </div>
+        <div class="pt-2 pb-4">
+          <a href="tel:16074759253" class="w-full inline-flex items-center justify-center space-x-2 theme-bg text-white font-extrabold text-sm py-3 rounded-full shadow-lg">
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
+            <span>Call: (607) 475-9253</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section with Requested Unsplash Background -->
+  <!-- Hero Section -->
   <section class="relative pt-36 pb-20 md:pt-48 md:pb-28 overflow-hidden border-b border-slate-200">
     <div class="absolute inset-0 -z-10 bg-slate-950">
-      <img src="https://images.unsplash.com/photo-1584905066893-7d5c142ba4e1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Home Cable TV Setup" class="w-full h-full object-cover opacity-25 mix-blend-luminosity">
+      <img src="https://images.unsplash.com/photo-1584905066893-7d5c142ba4e1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Home Setup" class="w-full h-full object-cover opacity-25 mix-blend-luminosity">
       <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/90 to-[#FBFBFE]"></div>
     </div>
 
@@ -124,7 +114,7 @@
       </h1>
 
       <p class="text-base sm:text-xl text-slate-700 font-medium max-w-3xl mx-auto mb-10 leading-relaxed">
-        Skip confusing automated menus and frustrating robot trees. Call our direct concierge line at <strong class="text-black font-extrabold">(607) 475-9253</strong>. A certified live representative will review your bill, process payments, or update your entertainment plans immediately.
+        Skip confusing automated menus and frustrating robot loops. Call our direct concierge line at <strong class="text-black font-extrabold">(607) 475-9253</strong>. A certified live representative will review your bill, process payments, or update your entertainment plans immediately.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -151,7 +141,7 @@
     </div>
   </section>
 
-  <!-- 7 Major Providers Highlighted Section -->
+  <!-- 7 Major Providers Section -->
   <section class="py-14 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-10">
@@ -163,11 +153,12 @@
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        
         <!-- 1. SiriusXM -->
         <div class="bento-card bg-white rounded-2xl p-5 border-2 border-purple-200 shadow-sm flex flex-col justify-between hover:border-theme">
           <div>
-            <div class="h-14 bg-slate-50 rounded-xl p-2.5 flex items-center justify-center mb-3">
-              <img src="https://brandslogos.com/wp-content/uploads/images/large/siriusxm-logo-vector.svg" alt="SiriusXM" class="max-h-10 max-w-full object-contain">
+            <div class="h-16 bg-slate-50 rounded-xl p-2.5 flex items-center justify-center mb-3">
+              <img src="https://brandslogos.com/wp-content/uploads/images/large/siriusxm-logo-vector.svg" alt="SiriusXM Satellite Radio" class="max-h-11 w-auto object-contain">
             </div>
             <h3 class="text-lg font-black theme-text text-center mb-1">SiriusXM Satellite</h3>
             <p class="text-xs text-slate-600 text-center leading-relaxed mb-4">Car radio renewals, activation signal re-sending, and balances.</p>
@@ -180,8 +171,8 @@
         <!-- 2. Spectrum -->
         <div class="bento-card bg-white rounded-2xl p-5 border-2 border-purple-200 shadow-sm flex flex-col justify-between hover:border-theme">
           <div>
-            <div class="h-14 bg-slate-50 rounded-xl p-2.5 flex items-center justify-center mb-3">
-              <img src="https://corporate.charter.com/static/da94033386d1044b44e59b86c4c51781/ca5d3/Spectrum_Logo_Preview.webp" alt="Spectrum" class="max-h-9 max-w-full object-contain">
+            <div class="h-16 bg-slate-50 rounded-xl p-2.5 flex items-center justify-center mb-3">
+              <img src="https://corporate.charter.com/static/da94033386d1044b44e59b86c4c51781/ca5d3/Spectrum_Logo_Preview.webp" alt="Spectrum" class="max-h-10 w-auto object-contain">
             </div>
             <h3 class="text-lg font-black theme-text text-center mb-1">Charter Spectrum</h3>
             <p class="text-xs text-slate-600 text-center leading-relaxed mb-4">Cable TV statement payments, fiber internet, and late fee help.</p>
@@ -194,8 +185,8 @@
         <!-- 3. DirecTV -->
         <div class="bento-card bg-white rounded-2xl p-5 border-2 border-purple-200 shadow-sm flex flex-col justify-between hover:border-theme">
           <div>
-            <div class="h-14 bg-slate-50 rounded-xl p-2.5 flex items-center justify-center mb-3">
-              <img src="https://s10019.cdn.ncms.io/wp-content/themes/directv-v5/assets/images/dtv-logo-cd6841a51c0fe602e4da.svg" alt="DirecTV" class="max-h-8 max-w-full object-contain">
+            <div class="h-16 bg-slate-50 rounded-xl p-2.5 flex items-center justify-center mb-3">
+              <img src="https://s10019.cdn.ncms.io/wp-content/themes/directv-v5/assets/images/dtv-logo-cd6841a51c0fe602e4da.svg" alt="DirecTV" class="max-h-12 w-auto object-contain">
             </div>
             <h3 class="text-lg font-black theme-text text-center mb-1">DirecTV Satellite</h3>
             <p class="text-xs text-slate-600 text-center leading-relaxed mb-4">Satellite bill pay, premium sports passes, and receiver support.</p>
@@ -208,8 +199,8 @@
         <!-- 4. Comcast Xfinity -->
         <div class="bento-card bg-white rounded-2xl p-5 border-2 border-purple-200 shadow-sm flex flex-col justify-between hover:border-theme">
           <div>
-            <div class="h-14 bg-slate-50 rounded-xl p-2.5 flex items-center justify-center mb-3">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkMUAnqkHZfz2IkFxSCNHSkFFqyeYaeg4C1fBj1Ocmd04Cyc4cLaaZwBR3&s=10" alt="Xfinity" class="max-h-9 max-w-full object-contain">
+            <div class="h-16 bg-slate-50 rounded-xl p-2.5 flex items-center justify-center mb-3">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkMUAnqkHZfz2IkFxSCNHSkFFqyeYaeg4C1fBj1Ocmd04Cyc4cLaaZwBR3&s=10" alt="Comcast Xfinity" class="max-h-12 w-auto object-contain">
             </div>
             <h3 class="text-lg font-black theme-text text-center mb-1">Comcast Xfinity</h3>
             <p class="text-xs text-slate-600 text-center leading-relaxed mb-4">Broadband bills, home phone plans, and package updates.</p>
@@ -219,11 +210,25 @@
           </a>
         </div>
 
-        <!-- 5. Frontier -->
+        <!-- 5. DISH Network -->
         <div class="bento-card bg-white rounded-2xl p-5 border-2 border-purple-200 shadow-sm flex flex-col justify-between hover:border-theme">
           <div>
-            <div class="h-14 bg-slate-50 rounded-xl p-2.5 flex items-center justify-center mb-3">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Frontier_Communications_logo_April_2022.svg" alt="Frontier" class="max-h-7 max-w-full object-contain">
+            <div class="h-16 bg-slate-50 rounded-xl p-2.5 flex items-center justify-center mb-3">
+              <img src="https://cdn.filestackcontent.com/auto_image/eypMaNJ7TUy9i703zI0H" alt="DISH Network" class="max-h-10 w-auto object-contain">
+            </div>
+            <h3 class="text-lg font-black theme-text text-center mb-1">DISH Network</h3>
+            <p class="text-xs text-slate-600 text-center leading-relaxed mb-4">Satellite TV balances, receiver upgrades, and package assistance.</p>
+          </div>
+          <a href="tel:16074759253" class="w-full inline-flex items-center justify-center space-x-1.5 theme-bg text-white font-bold text-xs py-2.5 rounded-full hover:bg-theme-dark transition-colors">
+            <i data-lucide="phone" class="w-3.5 h-3.5"></i><span>Call (607) 475-9253</span>
+          </a>
+        </div>
+
+        <!-- 6. Frontier Fiber -->
+        <div class="bento-card bg-white rounded-2xl p-5 border-2 border-purple-200 shadow-sm flex flex-col justify-between hover:border-theme">
+          <div>
+            <div class="h-16 bg-slate-50 rounded-xl p-2.5 flex items-center justify-center mb-3">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Frontier_Communications_logo_April_2022.svg" alt="Frontier" class="max-h-8 w-auto object-contain">
             </div>
             <h3 class="text-lg font-black theme-text text-center mb-1">Frontier Fiber</h3>
             <p class="text-xs text-slate-600 text-center leading-relaxed mb-4">Fiber monthly statements, landlines, and speed tiers.</p>
@@ -233,33 +238,20 @@
           </a>
         </div>
 
-        <!-- 6. Optimum -->
-        <div class="bento-card bg-white rounded-2xl p-5 border-2 border-purple-200 shadow-sm flex flex-col justify-between hover:border-theme">
-          <div>
-            <div class="h-14 bg-slate-50 rounded-xl p-2.5 flex items-center justify-center mb-3">
-              <img src="https://cdn.filestackcontent.com/auto_image/eypMaNJ7TUy9i703zI0H" alt="Optimum" class="max-h-7 max-w-full object-contain">
-            </div>
-            <h3 class="text-lg font-black theme-text text-center mb-1">Optimum TV</h3>
-            <p class="text-xs text-slate-600 text-center leading-relaxed mb-4">Account balance clearing, gateway support, and channel tiers.</p>
-          </div>
-          <a href="tel:16074759253" class="w-full inline-flex items-center justify-center space-x-1.5 theme-bg text-white font-bold text-xs py-2.5 rounded-full hover:bg-theme-dark transition-colors">
-            <i data-lucide="phone" class="w-3.5 h-3.5"></i><span>Call (607) 475-9253</span>
-          </a>
-        </div>
-
-        <!-- 7. Verizon -->
+        <!-- 7. Optimum TV & Internet -->
         <div class="bento-card bg-white rounded-2xl p-5 border-2 border-purple-200 shadow-sm flex flex-col justify-between hover:border-theme sm:col-span-2 lg:col-span-2">
           <div>
-            <div class="h-14 bg-slate-50 rounded-xl p-2.5 flex items-center justify-center mb-3">
-              <img src="https://tundra.frontier.redventures.io/migration/site-logo-verizon.svg" alt="Verizon" class="max-h-6 max-w-full object-contain">
+            <div class="h-16 bg-slate-50 rounded-xl p-2.5 flex items-center justify-center mb-3">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Optimum_logo.png" alt="Optimum" class="max-h-9 w-auto object-contain">
             </div>
-            <h3 class="text-lg font-black theme-text text-center mb-1">Verizon Fios & 5G Home</h3>
-            <p class="text-xs text-slate-600 text-center leading-relaxed mb-4">Telephone bill pay, bundle verification, and connection restoration.</p>
+            <h3 class="text-lg font-black theme-text text-center mb-1">Optimum TV & Internet</h3>
+            <p class="text-xs text-slate-600 text-center leading-relaxed mb-4">Statement payments, gateway support, and channel additions.</p>
           </div>
           <a href="tel:16074759253" class="w-full inline-flex items-center justify-center space-x-1.5 theme-bg text-white font-bold text-xs py-2.5 rounded-full hover:bg-theme-dark transition-colors">
             <i data-lucide="phone" class="w-3.5 h-3.5"></i><span>Call Toll-Free: (607) 475-9253</span>
           </a>
         </div>
+
       </div>
     </div>
   </section>
@@ -337,7 +329,7 @@
       <div class="pt-6 border-t border-slate-800 text-center text-slate-500 space-y-2">
         <p>&copy; 2026 CablePay. All rights reserved.</p>
         <p class="text-[10px] sm:text-[11px] text-slate-500 max-w-3xl mx-auto leading-relaxed">
-          Disclaimer: CablePay provides third-party telephone payment and account concierge services. All logos, trademarks, and registered brands (SiriusXM, Xfinity, Spectrum, DirecTV, Optimum, Frontier, Verizon) belong strictly to their respective owners.
+          Disclaimer: CablePay provides third-party telephone payment and account concierge services. All logos, trademarks, and registered brands (SiriusXM, Xfinity, Spectrum, DirecTV, Optimum, Frontier, DISH) belong strictly to their respective owners.
         </p>
       </div>
     </div>

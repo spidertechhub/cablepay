@@ -14,85 +14,85 @@
 
 <body class="bg-[#FBFBFE] text-slate-900 font-sans antialiased page-fade">
 
-  <!-- Fixed Top Live Bar -->
-  <div class="fixed top-0 left-0 right-0 z-50 bg-black text-white text-xs sm:text-sm py-2 px-3 sm:px-6 shadow-md border-b border-white/10">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
-      <div class="flex items-center space-x-2 flex-shrink-0">
-        <span class="relative flex h-2.5 w-2.5">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-        </span>
-        <span class="font-bold text-[11px] sm:text-xs text-slate-200 no-wrap-text">Live Agents Online 24/7</span>
-      </div>
-      <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 bg-white text-black hover:bg-slate-100 px-3 sm:px-4 py-1 rounded-full font-bold text-[11px] sm:text-xs transition-transform active:scale-95 flex-shrink-0">
-        <i data-lucide="phone-call" class="w-3.5 h-3.5 theme-text"></i>
-        <span class="no-wrap-text">Call: <strong class="theme-text">(607) 475-9253</strong></span>
-      </a>
-    </div>
-  </div>
-
-  <!-- Header & Navigation -->
-  <header class="fixed top-9 sm:top-10 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
-      <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
-        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl theme-bg flex items-center justify-center text-white shadow-md">
-          <i data-lucide="tv" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+  <!-- ================= UNIFIED FIXED HEADER (LIVE BAR + NAVBAR) ================= -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <div class="bg-black text-white text-xs sm:text-sm py-2 px-3 sm:px-6 shadow-md border-b border-white/10">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+        <div class="flex items-center space-x-2 flex-shrink-0">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+          </span>
+          <span class="font-bold text-[11px] sm:text-xs text-slate-200 no-wrap-text">Live Representatives Available 24/7</span>
         </div>
-        <div class="flex flex-col">
-          <span class="text-xl sm:text-2xl font-black tracking-tight text-black leading-none">Cable<span class="theme-text">Pay</span></span>
-          <span class="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-slate-500 mt-0.5 hidden xs:block">Telephone Concierge</span>
-        </div>
-      </a>
-
-      <nav class="hidden lg:flex items-center space-x-6 text-sm font-bold text-slate-700">
-        <a href="index.html" class="hover:text-theme transition-colors nav-link">Home</a>
-        <a href="providers.html" class="hover:text-theme transition-colors nav-link">Major Providers</a>
-        <a href="about.html" class="hover:text-theme transition-colors nav-link">About Us</a>
-        <a href="contact.html" class="hover:text-theme transition-colors nav-link">Contact Us</a>
-        <a href="refund-policy.html" class="hover:text-theme transition-colors nav-link text-rose-600">No Refunds Policy</a>
-      </nav>
-
-      <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
-        <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 theme-bg hover:bg-theme-dark text-white font-black text-xs sm:text-sm md:text-base px-3 sm:px-5 py-2 sm:py-3 rounded-full apple-shadow transition-all duration-200 active:scale-95">
-          <i data-lucide="phone" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white"></i>
-          <span class="no-wrap-text">(607) 475-9253</span>
+        <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 bg-white text-black hover:bg-slate-100 px-3 sm:px-4 py-1 rounded-full font-bold text-[11px] sm:text-xs transition-transform active:scale-95 flex-shrink-0">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 theme-text"></i>
+          <span class="no-wrap-text">Call: <strong class="theme-text">(607) 475-9253</strong></span>
         </a>
-        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors" aria-label="Toggle Menu">
-          <i data-lucide="menu" id="menuIconOpen" class="w-6 h-6"></i>
-          <i data-lucide="x" id="menuIconClose" class="w-6 h-6 hidden"></i>
-        </button>
       </div>
     </div>
 
-    <!-- Mobile Drawer Menu -->
-    <div id="mobileMenu" class="lg:hidden bg-white border-b border-slate-200 px-4 space-y-2 shadow-xl">
-      <div class="flex flex-col space-y-1 font-bold text-slate-800 text-sm pt-2">
-        <a href="index.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
-          <span>Home</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+    <div class="bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+        <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl theme-bg flex items-center justify-center text-white shadow-md">
+            <i data-lucide="tv" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl sm:text-2xl font-black tracking-tight text-black leading-none">Cable<span class="theme-text">Pay</span></span>
+            <span class="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-slate-500 mt-0.5 hidden xs:block">Telephone Concierge</span>
+          </div>
         </a>
-        <a href="providers.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
-          <span>Major Providers</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-        </a>
-        <a href="about.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
-          <span>About Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-        </a>
-        <a href="contact.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
-          <span>Contact Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
-        </a>
-        <a href="refund-policy.html" class="px-3 py-2 rounded-xl hover:bg-rose-50 text-rose-600 flex items-center justify-between">
-          <span>No Refunds Policy</span><i data-lucide="chevron-right" class="w-4 h-4 text-rose-400"></i>
-        </a>
+
+        <nav class="hidden lg:flex items-center space-x-6 text-sm font-bold text-slate-700">
+          <a href="index.html" class="hover:text-theme transition-colors nav-link">Home</a>
+          <a href="providers.html" class="hover:text-theme transition-colors nav-link">Major Providers</a>
+          <a href="about.html" class="hover:text-theme transition-colors nav-link">About Us</a>
+          <a href="contact.html" class="hover:text-theme transition-colors nav-link">Contact Us</a>
+          <a href="refund-policy.html" class="hover:text-theme transition-colors nav-link text-rose-600">No Refunds Policy</a>
+        </nav>
+
+        <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+          <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 theme-bg hover:bg-theme-dark text-white font-black text-xs sm:text-sm md:text-base px-3 sm:px-5 py-2 sm:py-3 rounded-full apple-shadow transition-all duration-200 active:scale-95">
+            <i data-lucide="phone" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white"></i>
+            <span class="no-wrap-text">(607) 475-9253</span>
+          </a>
+          <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors" aria-label="Toggle Menu">
+            <i data-lucide="menu" id="menuIconOpen" class="w-6 h-6"></i>
+            <i data-lucide="x" id="menuIconClose" class="w-6 h-6 hidden"></i>
+          </button>
+        </div>
       </div>
-      <div class="pt-2 pb-4">
-        <a href="tel:16074759253" class="w-full inline-flex items-center justify-center space-x-2 theme-bg text-white font-extrabold text-sm py-3 rounded-full shadow-lg">
-          <i data-lucide="phone-call" class="w-4 h-4"></i>
-          <span>Call: (607) 475-9253</span>
-        </a>
+
+      <div id="mobileMenu" class="lg:hidden bg-white border-b border-slate-200 px-4 space-y-2 shadow-xl">
+        <div class="flex flex-col space-y-1 font-bold text-slate-800 text-sm pt-2">
+          <a href="index.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+            <span>Home</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="providers.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+            <span>Major Providers</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="about.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+            <span>About Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="contact.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+            <span>Contact Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+          </a>
+          <a href="refund-policy.html" class="px-3 py-2 rounded-xl hover:bg-rose-50 text-rose-600 flex items-center justify-between">
+            <span>No Refunds Policy</span><i data-lucide="chevron-right" class="w-4 h-4 text-rose-400"></i>
+          </a>
+        </div>
+        <div class="pt-2 pb-4">
+          <a href="tel:16074759253" class="w-full inline-flex items-center justify-center space-x-2 theme-bg text-white font-extrabold text-sm py-3 rounded-full shadow-lg">
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
+            <span>Call: (607) 475-9253</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Dynamic Content Block -->
+  <!-- Page Content -->
   <main class="pt-36 pb-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm space-y-6">
       <span class="bg-theme-light theme-text px-3 py-1 rounded-full text-xs font-bold">Contact & Support</span>
