@@ -15,7 +15,7 @@
 <body class="bg-[#FBFBFE] text-slate-900 font-sans antialiased selection:bg-purple-100 selection:text-theme page-fade">
 
   <!-- ================= UNIFIED FIXED HEADER (LIVE BAR + NAVBAR) ================= -->
-<header class="sticky top-0 left-0 right-0 z-50">
+<header class="fixed inset-x-0 top-0 z-50">
     <!-- Fixed Top Live Announcement Bar -->
     <div class="bg-black text-white text-xs sm:text-sm py-2 px-3 sm:px-6 shadow-md border-b border-white/10">
       <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
@@ -60,14 +60,14 @@
             <span class="no-wrap-text">(607) 475-9253</span>
           </a>
           <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors" aria-label="Toggle Menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" id="menuIconOpen" class="lucide lucide-menu w-6 h-6 hidden"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true" id="menuIconClose" class="lucide lucide-x w-6 h-6"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" id="menuIconOpen" class="lucide lucide-menu w-6 h-6"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true" id="menuIconClose" class="lucide lucide-x w-6 h-6 hidden"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
           </button>
         </div>
       </div>
 
-      <!-- Mobile Drawer Menu -->
-      <div id="mobileMenu" class="lg:hidden bg-white border-b border-slate-200 px-4 space-y-2 shadow-xl menu-open">
+      <!-- Mobile Drawer Menu (Hidden by default) -->
+      <div id="mobileMenu" class="lg:hidden hidden bg-white border-b border-slate-200 px-4 space-y-2 shadow-xl">
         <div class="flex flex-col space-y-1 font-bold text-slate-800 text-sm pt-2">
           <a href="index.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
             <span>Home</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-slate-400"><path d="m9 18 6-6-6-6"></path></svg>
@@ -94,7 +94,6 @@
       </div>
     </div>
 </header>
-
   <!-- Hero Section -->
   <section class="relative pt-36 pb-20 md:pt-48 md:pb-28 overflow-hidden border-b border-slate-200">
     <div class="absolute inset-0 -z-10 bg-slate-950">
