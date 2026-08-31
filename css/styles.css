@@ -1,0 +1,50 @@
+:root {
+  --text-color-theme1-base: 90 35 185;
+  --theme-color: rgb(var(--text-color-theme1-base));
+  --theme-dark: #43198a;
+  --theme-light: #f4efff;
+}
+
+.theme-bg { background-color: var(--theme-color); }
+.theme-text { color: var(--theme-color); }
+.theme-border { border-color: var(--theme-color); }
+
+.apple-shadow {
+  box-shadow: 0 12px 36px -8px rgba(90, 35, 185, 0.22), 0 4px 12px -2px rgba(0, 0, 0, 0.06);
+}
+
+.bento-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(90, 35, 185, 0.18);
+}
+
+.no-wrap-text {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+/* Smooth Page Fade-In */
+.page-fade {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Menu Animation */
+#mobileMenu {
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+#mobileMenu.menu-open {
+  max-height: 480px;
+  opacity: 1;
+}

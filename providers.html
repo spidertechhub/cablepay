@@ -8,23 +8,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { theme: { DEFAULT: 'rgb(90, 35, 185)', dark: '#43198a', light: '#f4efff', surface: '#faf7ff' } },
-          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="css/output.css">
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body class="bg-[#FBFBFE] text-slate-900 font-sans antialiased page-fade">
 
-  <!-- Top Bar -->
+  <!-- Fixed Top Live Bar -->
   <div class="fixed top-0 left-0 right-0 z-50 bg-black text-white text-xs sm:text-sm py-2 px-3 sm:px-6 shadow-md border-b border-white/10">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
       <div class="flex items-center space-x-2 flex-shrink-0">
@@ -32,61 +22,78 @@
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
         </span>
-        <span class="font-bold text-[11px] sm:text-xs text-slate-200">Live Representatives Available</span>
+        <span class="font-bold text-[11px] sm:text-xs text-slate-200 no-wrap-text">Live Agents Online 24/7</span>
       </div>
-      <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 bg-white text-black hover:bg-slate-100 px-3 sm:px-4 py-1 rounded-full font-bold text-[11px] sm:text-xs">
+      <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 bg-white text-black hover:bg-slate-100 px-3 sm:px-4 py-1 rounded-full font-bold text-[11px] sm:text-xs transition-transform active:scale-95 flex-shrink-0">
         <i data-lucide="phone-call" class="w-3.5 h-3.5 theme-text"></i>
-        <span>Call: <strong class="theme-text">(607) 475-9253</strong></span>
+        <span class="no-wrap-text">Call: <strong class="theme-text">(607) 475-9253</strong></span>
       </a>
     </div>
   </div>
 
-  <!-- Header -->
-  <header class="fixed top-9 sm:top-10 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center space-x-2">
-        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl theme-bg flex items-center justify-center text-white shadow-md">
+  <!-- Header & Navigation -->
+  <header class="fixed top-9 sm:top-10 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+      <a href="index.html" class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl theme-bg flex items-center justify-center text-white shadow-md">
           <i data-lucide="tv" class="w-5 h-5 sm:w-6 sm:h-6"></i>
         </div>
-        <span class="text-xl sm:text-2xl font-black tracking-tight text-black">Cable<span class="theme-text">Pay</span></span>
+        <div class="flex flex-col">
+          <span class="text-xl sm:text-2xl font-black tracking-tight text-black leading-none">Cable<span class="theme-text">Pay</span></span>
+          <span class="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-slate-500 mt-0.5 hidden xs:block">Telephone Concierge</span>
+        </div>
       </a>
 
       <nav class="hidden lg:flex items-center space-x-6 text-sm font-bold text-slate-700">
-        <a href="index.html" class="hover:text-theme nav-link">Home</a>
-        <a href="providers.html" class="hover:text-theme nav-link">Major Providers</a>
-        <a href="about.html" class="hover:text-theme nav-link">About Us</a>
-        <a href="contact.html" class="hover:text-theme nav-link">Contact Us</a>
-        <a href="refund-policy.html" class="hover:text-theme nav-link text-rose-600">No Refunds Policy</a>
+        <a href="index.html" class="hover:text-theme transition-colors nav-link">Home</a>
+        <a href="providers.html" class="hover:text-theme transition-colors nav-link">Major Providers</a>
+        <a href="about.html" class="hover:text-theme transition-colors nav-link">About Us</a>
+        <a href="contact.html" class="hover:text-theme transition-colors nav-link">Contact Us</a>
+        <a href="refund-policy.html" class="hover:text-theme transition-colors nav-link text-rose-600">No Refunds Policy</a>
       </nav>
 
-      <div class="flex items-center space-x-2">
-        <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 theme-bg hover:bg-theme-dark text-white font-black text-xs sm:text-sm px-4 py-2.5 rounded-full apple-shadow">
-          <i data-lucide="phone" class="w-4 h-4"></i>
-          <span>(607) 475-9253</span>
+      <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+        <a href="tel:16074759253" class="inline-flex items-center space-x-1.5 theme-bg hover:bg-theme-dark text-white font-black text-xs sm:text-sm md:text-base px-3 sm:px-5 py-2 sm:py-3 rounded-full apple-shadow transition-all duration-200 active:scale-95">
+          <i data-lucide="phone" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white"></i>
+          <span class="no-wrap-text">(607) 475-9253</span>
         </a>
-        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100"><i data-lucide="menu" id="menuIconOpen" class="w-6 h-6"></i><i data-lucide="x" id="menuIconClose" class="w-6 h-6 hidden"></i></button>
+        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors" aria-label="Toggle Menu">
+          <i data-lucide="menu" id="menuIconOpen" class="w-6 h-6"></i>
+          <i data-lucide="x" id="menuIconClose" class="w-6 h-6 hidden"></i>
+        </button>
       </div>
     </div>
 
-    <!-- Mobile Drawer -->
+    <!-- Mobile Drawer Menu -->
     <div id="mobileMenu" class="lg:hidden bg-white border-b border-slate-200 px-4 space-y-2 shadow-xl">
       <div class="flex flex-col space-y-1 font-bold text-slate-800 text-sm pt-2">
-        <a href="index.html" class="px-3 py-2 rounded-xl hover:bg-theme-light">Home</a>
-        <a href="providers.html" class="px-3 py-2 rounded-xl hover:bg-theme-light theme-text">Major Providers</a>
-        <a href="about.html" class="px-3 py-2 rounded-xl hover:bg-theme-light">About Us</a>
-        <a href="contact.html" class="px-3 py-2 rounded-xl hover:bg-theme-light">Contact Us</a>
-        <a href="refund-policy.html" class="px-3 py-2 rounded-xl text-rose-600">No Refunds Policy</a>
+        <a href="index.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+          <span>Home</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="providers.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+          <span>Major Providers</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="about.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+          <span>About Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="contact.html" class="px-3 py-2 rounded-xl hover:bg-theme-light hover:text-theme flex items-center justify-between">
+          <span>Contact Us</span><i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i>
+        </a>
+        <a href="refund-policy.html" class="px-3 py-2 rounded-xl hover:bg-rose-50 text-rose-600 flex items-center justify-between">
+          <span>No Refunds Policy</span><i data-lucide="chevron-right" class="w-4 h-4 text-rose-400"></i>
+        </a>
       </div>
       <div class="pt-2 pb-4">
-        <a href="tel:16074759253" class="w-full inline-flex items-center justify-center space-x-2 theme-bg text-white font-extrabold text-sm py-3 rounded-full">
-          <i data-lucide="phone" class="w-4 h-4"></i><span>Call (607) 475-9253</span>
+        <a href="tel:16074759253" class="w-full inline-flex items-center justify-center space-x-2 theme-bg text-white font-extrabold text-sm py-3 rounded-full shadow-lg">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          <span>Call: (607) 475-9253</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Page Content -->
-  <main class="pt-36 pb-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Dynamic Content Block -->
+  <main class="pt-36 pb-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-12">
       <span class="inline-block px-3 py-1 rounded-full text-xs font-black uppercase bg-theme-light theme-text border border-purple-200 mb-2">Carrier Directory</span>
       <h1 class="text-3xl sm:text-5xl font-black text-black mb-4">Supported Cable & Satellite Networks</h1>
@@ -94,11 +101,10 @@
     </div>
 
     <div class="space-y-6">
-      <!-- SiriusXM -->
       <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex items-center space-x-5">
-          <div class="w-24 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2 flex items-center justify-center flex-shrink-0">
-            <img src="https://brandslogos.com/wp-content/uploads/images/large/siriusxm-logo-vector.svg" alt="SiriusXM" class="max-h-10 max-w-full">
+          <div class="w-28 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2.5 flex items-center justify-center flex-shrink-0">
+            <img src="https://brandslogos.com/wp-content/uploads/images/large/siriusxm-logo-vector.svg" alt="SiriusXM" class="max-h-12 w-auto object-contain">
           </div>
           <div>
             <h3 class="text-xl font-black text-black">SiriusXM Satellite Radio</h3>
@@ -110,11 +116,10 @@
         </a>
       </div>
 
-      <!-- Spectrum -->
       <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex items-center space-x-5">
-          <div class="w-24 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2 flex items-center justify-center flex-shrink-0">
-            <img src="https://corporate.charter.com/static/da94033386d1044b44e59b86c4c51781/ca5d3/Spectrum_Logo_Preview.webp" alt="Spectrum" class="max-h-8 max-w-full">
+          <div class="w-28 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2.5 flex items-center justify-center flex-shrink-0">
+            <img src="https://corporate.charter.com/static/da94033386d1044b44e59b86c4c51781/ca5d3/Spectrum_Logo_Preview.webp" alt="Spectrum" class="max-h-10 w-auto object-contain">
           </div>
           <div>
             <h3 class="text-xl font-black text-black">Charter Spectrum TV & Internet</h3>
@@ -126,11 +131,10 @@
         </a>
       </div>
 
-      <!-- DirecTV -->
       <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex items-center space-x-5">
-          <div class="w-24 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2 flex items-center justify-center flex-shrink-0">
-            <img src="https://s10019.cdn.ncms.io/wp-content/themes/directv-v5/assets/images/dtv-logo-cd6841a51c0fe602e4da.svg" alt="DirecTV" class="max-h-7 max-w-full">
+          <div class="w-28 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2.5 flex items-center justify-center flex-shrink-0">
+            <img src="https://s10019.cdn.ncms.io/wp-content/themes/directv-v5/assets/images/dtv-logo-cd6841a51c0fe602e4da.svg" alt="DirecTV" class="max-h-12 w-auto object-contain">
           </div>
           <div>
             <h3 class="text-xl font-black text-black">DirecTV Satellite & Stream</h3>
@@ -142,11 +146,10 @@
         </a>
       </div>
 
-      <!-- Comcast Xfinity -->
       <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="flex items-center space-x-5">
-          <div class="w-24 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2 flex items-center justify-center flex-shrink-0">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkMUAnqkHZfz2IkFxSCNHSkFFqyeYaeg4C1fBj1Ocmd04Cyc4cLaaZwBR3&s=10" alt="Xfinity" class="max-h-8 max-w-full">
+          <div class="w-28 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2.5 flex items-center justify-center flex-shrink-0">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkMUAnqkHZfz2IkFxSCNHSkFFqyeYaeg4C1fBj1Ocmd04Cyc4cLaaZwBR3&s=10" alt="Xfinity" class="max-h-12 w-auto object-contain">
           </div>
           <div>
             <h3 class="text-xl font-black text-black">Comcast Xfinity Broadband & TV</h3>
@@ -157,12 +160,134 @@
           <i data-lucide="phone" class="w-4 h-4"></i><span>Call (607) 475-9253</span>
         </a>
       </div>
+
+      <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center space-x-5">
+          <div class="w-28 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2.5 flex items-center justify-center flex-shrink-0">
+            <img src="https://cdn.filestackcontent.com/auto_image/eypMaNJ7TUy9i703zI0H" alt="DISH" class="max-h-11 w-auto object-contain">
+          </div>
+          <div>
+            <h3 class="text-xl font-black text-black">DISH Network Satellite</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Direct satellite TV statement settlements, hopper equipment support, and channel activations.</p>
+          </div>
+        </div>
+        <a href="tel:16074759253" class="w-full md:w-auto inline-flex items-center justify-center space-x-2 theme-bg text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full hover:bg-theme-dark flex-shrink-0">
+          <i data-lucide="phone" class="w-4 h-4"></i><span>Call (607) 475-9253</span>
+        </a>
+      </div>
+
+      <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center space-x-5">
+          <div class="w-28 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2.5 flex items-center justify-center flex-shrink-0">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Frontier_Communications_logo_April_2022.svg" alt="Frontier" class="max-h-8 w-auto object-contain">
+          </div>
+          <div>
+            <h3 class="text-xl font-black text-black">Frontier Communications Fiber</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Fiber Internet, landline monthly bills, and plan adjustments.</p>
+          </div>
+        </div>
+        <a href="tel:16074759253" class="w-full md:w-auto inline-flex items-center justify-center space-x-2 theme-bg text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full hover:bg-theme-dark flex-shrink-0">
+          <i data-lucide="phone" class="w-4 h-4"></i><span>Call (607) 475-9253</span>
+        </a>
+      </div>
+
+      <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center space-x-5">
+          <div class="w-28 h-16 bg-slate-50 border border-slate-100 rounded-2xl p-2.5 flex items-center justify-center flex-shrink-0">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Optimum_logo.png" alt="Optimum" class="max-h-10 w-auto object-contain">
+          </div>
+          <div>
+            <h3 class="text-xl font-black text-black">Optimum TV & Internet</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Account balance clearing, gateway support, and channel additions.</p>
+          </div>
+        </div>
+        <a href="tel:16074759253" class="w-full md:w-auto inline-flex items-center justify-center space-x-2 theme-bg text-white font-bold text-xs sm:text-sm px-6 py-3.5 rounded-full hover:bg-theme-dark flex-shrink-0">
+          <i data-lucide="phone" class="w-4 h-4"></i><span>Call (607) 475-9253</span>
+        </a>
+      </div>
     </div>
   </main>
 
-  <footer class="bg-slate-950 text-slate-400 text-xs py-8 text-center border-t border-slate-800">
-    <p>&copy; 2026 CablePay. For assistance call <a href="tel:16074759253" class="text-white font-bold underline">(607) 475-9253</a></p>
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 text-xs pt-12 pb-24 sm:pb-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800 text-center md:text-left">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 rounded-xl theme-bg text-white flex items-center justify-center">
+            <i data-lucide="tv" class="w-4 h-4"></i>
+          </div>
+          <span class="text-xl font-bold text-white">Cable<span class="theme-text">Pay</span></span>
+        </div>
+        <div class="flex items-center space-x-2 text-white font-bold text-base">
+          <i data-lucide="phone" class="w-4 h-4 theme-text"></i>
+          <span>Direct Phone Line: <a href="tel:16074759253" class="text-white hover:underline">(607) 475-9253</a></span>
+        </div>
+      </div>
+
+      <div class="py-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center sm:text-left">
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Navigation</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="providers.html" class="hover:text-white transition-colors">Major Providers</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Providers</h4>
+          <ul class="space-y-2">
+            <li><a href="tel:16074759253" class="hover:text-white transition-colors">SiriusXM Support</a></li>
+            <li><a href="tel:16074759253" class="hover:text-white transition-colors">Spectrum Cable</a></li>
+            <li><a href="tel:16074759253" class="hover:text-white transition-colors">DirecTV Satellite</a></li>
+            <li><a href="tel:16074759253" class="hover:text-white transition-colors">Xfinity Broadband</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Legal Policies</h4>
+          <ul class="space-y-2">
+            <li><a href="refund-policy.html" class="text-rose-400 hover:text-rose-300 font-bold transition-colors">No Refunds Policy</a></li>
+            <li><a href="terms-conditions.html" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+            <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Telephone Support</h4>
+          <p class="text-[11px] text-slate-400 mb-2">Toll-free assistance for billing management.</p>
+          <a href="tel:16074759253" class="inline-block bg-white/10 hover:bg-white/20 text-white font-bold px-3 py-1.5 rounded-full text-[11px]">
+            (607) 475-9253
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-slate-800 text-center text-slate-500 space-y-2">
+        <p>&copy; 2026 CablePay. All rights reserved.</p>
+        <p class="text-[10px] sm:text-[11px] text-slate-500 max-w-3xl mx-auto leading-relaxed">
+          Disclaimer: CablePay provides third-party telephone payment and account concierge services. All logos, trademarks, and registered brands (SiriusXM, Xfinity, Spectrum, DirecTV, Optimum, Frontier, DISH) belong strictly to their respective owners.
+        </p>
+      </div>
+    </div>
   </footer>
+
+  <!-- Fixed Bottom Floating Pill -->
+  <div class="fixed bottom-3 left-0 right-0 z-50 px-3 sm:px-4">
+    <div class="max-w-md mx-auto">
+      <a href="tel:16074759253" class="w-full bg-black text-white border-2 theme-border rounded-full py-2.5 sm:py-3 px-4 sm:px-6 shadow-2xl flex items-center justify-between hover:bg-slate-900 transition-transform active:scale-95">
+        <div class="flex items-center space-x-2.5 sm:space-x-3">
+          <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full theme-bg text-white flex items-center justify-center flex-shrink-0 animate-pulse">
+            <i data-lucide="phone-call" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+          </div>
+          <div class="text-left">
+            <p class="text-[9px] sm:text-[10px] uppercase font-bold text-slate-400">Tap to Call Live Agent</p>
+            <p class="text-xs sm:text-base font-extrabold text-white no-wrap-text">(607) 475-9253</p>
+          </div>
+        </div>
+        <span class="theme-bg text-white font-bold text-[11px] sm:text-xs px-3 sm:px-4 py-1.5 rounded-full flex-shrink-0">
+          Call Now
+        </span>
+      </a>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
