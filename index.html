@@ -345,4 +345,41 @@
 
   <script src="js/main.js"></script>
 </body>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (menuBtn && mobileMenu) {
+      const menuIcon = menuBtn.querySelector('[data-lucide="menu"]');
+      const closeIcon = menuBtn.querySelector('[data-lucide="x"]');
+      const navLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
+
+      const toggleMenu = () => {
+        const isOpen = mobileMenu.classList.contains('hidden');
+        
+        // Toggle visibility
+        mobileMenu.classList.toggle('hidden', !isOpen);
+        menuBtn.setAttribute('aria-expanded', isOpen);
+
+        // Swap icons if present
+        if (menuIcon && closeIcon) {
+          menuIcon.classList.toggle('hidden', isOpen);
+          closeIcon.classList.toggle('hidden', !isOpen);
+        }
+      };
+
+      menuBtn.addEventListener('click', toggleMenu);
+
+      // Close mobile menu automatically when a section link is clicked
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (!mobileMenu.classList.contains('hidden')) {
+            toggleMenu();
+          }
+        });
+      });
+    }
+  });
+</script>
 </html>
